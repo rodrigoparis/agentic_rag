@@ -18,6 +18,9 @@ def main():
             question = input("Do me a question or write 'exit': ")
             if question.lower() == "exit":
                 logger.info("👋 Session ended by user.")
+                print("\nThank you for chatting with me! 🚀")
+                print("If you'd like to connect, feel free to reach out via LinkedIn:")
+                print("🔗 https://www.linkedin.com/in/rodrigo-paris-bna/\n")
                 break
             logger.info(f"🧑 User Question: {question}")
             response = agent.run(question)
