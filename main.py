@@ -8,13 +8,6 @@ from utils.config import Config
 
 
 def main():
-    # Ejecuto una sola vez lo siguiente para crear un ambiente:
-    # python - m venv miambiente
-    # Esto crea una carpeta venv con lo de mi ambiente
-    # Para activar el ambiente ejecuto:
-    # venv\Scripts\activate
-    # Una vez dentro de mi ambiente, lanzo el codigo main.py con
-    # python main.py
 
     logger.info("🚀 Started application in interactive mode.")
     try:

@@ -1,10 +1,6 @@
 # Use the langchain/langchain image as the base image
 FROM python:3.10-slim
 
-# Set Hugging Face Token as an environment variable
-# ENV HUGGINGFACEHUB_API_TOKEN=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
-# Option: docker run -e HUGGINGFACEHUB_API_TOKEN=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 agentic_rag
-
 # Set the working directory in the container
 WORKDIR /app
 
