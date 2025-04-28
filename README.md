@@ -1,97 +1,162 @@
-🧠 RAG Agent - LinkedIn CV Assistant
-🇪🇸 Descripción (Español)
-Este proyecto es un agente conversacional impulsado por RAG (Retrieval Augmented Generation) que permite consultar de
-forma interactiva mi Currículum Vitae.
 
-Utiliza técnicas de recuperación de información y generación aumentada para brindar respuestas basadas en el contenido
-de un archivo PDF (text.pdf), que contiene una copia actualizada de mi perfil de LinkedIn.
+# 🧠 RAG Agent - LinkedIn CV Assistant
 
-Está pensado para reclutadores, líderes técnicos o cualquier persona interesada en conocer mi trayectoria de manera ágil
-y conversacional.
+[![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)](https://www.python.org/)
+[![LangChain](https://img.shields.io/badge/LangChain-Agent--Retrieval-brightgreen)](https://www.langchain.dev/)
+[![Powered By](https://img.shields.io/badge/Powered%20by-OpenAI-ff69b4?logo=openai)](https://openai.com/)
 
-🇬🇧 Description (English)
-This project is a conversational agent powered by RAG (Retrieval Augmented Generation) that allows interactive
-consultation of my Curriculum Vitae.
+---
 
-It uses information retrieval and augmented generation techniques to provide answers based on the contents of a PDF file
- (text.pdf), which contains an updated copy of my LinkedIn profile.
+## 🇪🇸 Descripción (Español)
 
-It is designed for recruiters, technical leads, or anyone interested in quickly learning more about my professional
-background.
+¡Hola! 👋 Este proyecto es un agente conversacional impulsado por **RAG (Retrieval Augmented Generation)**, diseñado para consultar de forma interactiva mi **Currículum Vitae**.
 
-⚙️ Tecnologías utilizadas / Technologies used
-Python 3.10
+Utiliza técnicas avanzadas de recuperación de información y generación aumentada para responder basándose en un archivo PDF actualizado de mi perfil de LinkedIn.
 
-LangChain (Agent + Retrieval)
-FAISS (Vector store for semantic search)
-OpenAI (LLM for generating answers)
-dotenv (Environment variables management)
-colorlog (Enhanced logging with colors)
+Pensado especialmente para:
+- Reclutadores
+- Líderes técnicos
+- ¡O cualquier persona curiosa sobre mi trayectoria! 🚀
 
-🚀 Cómo ejecutar el proyecto / How to run the project
-Clonar el repositorio / Clone the repository
+---
 
-bash
-Copiar
-Editar
-git clone https://github.com/tu_usuario/agentic_rag.git
-cd agentic_rag
-Crear y activar un entorno virtual / Create and activate a virtual environment
+## 🇬🇧 Description (English)
 
-bash
-Copiar
-Editar
-python -m venv venv
-# Activar / Activate:
-# Windows
-venv\Scripts\activate
-# Mac/Linux
-source venv/bin/activate
-Instalar dependencias / Install dependencies
+Hello there! 👋 This project is a conversational agent powered by **RAG (Retrieval Augmented Generation)** that lets you interactively explore my **Curriculum Vitae**.
 
-bash
-Copiar
-Editar
-pip install -r requirements.txt
-Crear un archivo .env / Create a .env file
+It uses cutting-edge information retrieval and generation techniques, pulling answers from an updated PDF version of my LinkedIn profile.
 
-bash
-Copiar
-Editar
-# .env
-HUGGINGFACE_TOKEN=your_token_here
-KNOWLEDGE_FILE_PATH=data/text.pdf
-LOG_LEVEL=INFO
-Ejecutar la aplicación / Run the application
+Designed especially for:
+- Recruiters
+- Technical leads
+- Or anyone curious about my professional journey! 🚀
 
-bash
-Copiar
-Editar
-python main.py
-🧑‍💼 ¿Qué se puede preguntar? / What can you ask?
-Durante la sesión interactiva podés consultar cosas como:
+---
 
-"¿Cuál es su experiencia más reciente?" / "What is his most recent experience?"
+## ⚙️ Technologies Used
 
-"¿Qué tecnologías domina?" / "Which technologies does he master?"
+- 🐍 **Python 3.10**
+- 🔗 **LangChain** (Agent + Retrieval)
+- 📚 **FAISS** (Semantic search vector store)
+- 🤖 **OpenAI** (LLM for answer generation)
+- 🔒 **dotenv** (Environment variables management)
+- 🎨 **colorlog** (Pretty, colorful logging)
 
-"¿En qué empresas ha trabajado?" / "Which companies has he worked at?"
+---
 
-Para salir, simplemente escribí exit.
+## 🚀 How to Run the Project
 
-📚 Sobre el funcionamiento / How it works
-Vectoriza el contenido del PDF usando FAISS.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/tu_usuario/agentic_rag.git
+   cd agentic_rag
+   ```
 
-Recupera fragmentos relevantes según la consulta del usuario.
+2. **Create and activate a virtual environment:**
+   ```bash
+   python -m venv venv
 
-Genera respuestas utilizando un modelo de lenguaje de OpenAI.
+   # Windows
+   venv\Scripts\activate
 
-Esto permite respuestas más precisas y basadas en hechos reales, reduciendo el riesgo de alucinaciones típicas de los LLMs.
+   # Mac/Linux
+   source venv/bin/activate
+   ```
 
-📖 Créditos y referencias / Credits and References
-Este proyecto fue desarrollado con el apoyo de ChatGPT a través de prompts interactivos.
+3. **Install the dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Prompt inicial: "Ayúdame a crear un agente RAG para responder preguntas sobre mi CV usando LangChain".
+4. **Create a `.env` file with the following content:**
+   ```bash
+   # .env
+   HUGGINGFACE_TOKEN=your_token_here
+   KNOWLEDGE_FILE_PATH=data/resume.pdf
+   LOG_LEVEL=INFO
+   ```
 
-Inspirado en los ejemplos de Hugging Face sobre agentes RAG:
-👉 https://huggingface.co/docs/transformers/agentic_rag
+5. **Run the application:**
+   ```bash
+   python main.py
+   ```
+
+---
+
+## 🧑‍💼 What Can You Ask?
+
+During the interactive session, you can ask questions like:
+
+- "¿Cuál es su experiencia más reciente?" / "What is his most recent experience?"
+- "¿Qué tecnologías domina?" / "Which technologies does he master?"
+- "¿En qué empresas ha trabajado?" / "Which companies has he worked at?"
+
+👉 To exit, simply type `exit`.
+
+---
+
+## 📚 How It Works
+
+1. Vectorizes the PDF content using **FAISS** 🧠
+2. Retrieves the most relevant chunks based on user queries 🔍
+3. Generates accurate, grounded answers using **OpenAI LLMs** ✨
+
+> This setup significantly reduces hallucinations and ensures responses are tied to real, verified information.
+
+---
+
+## 📖 Credits & References
+
+This project was built with a lot of help from **ChatGPT** through interactive prompts.
+---
+
+## 🧠 Initial System Prompt
+
+<details>
+<summary>Click to expand the initial AI prompt used in this project 🔥</summary>
+
+<br>
+
+> You are a helpful, detail-oriented AI assistant collaborating on a Retrieval-Augmented Generation (RAG) project that builds a conversational agent over my LinkedIn CV PDF. We will work phase by phase, and you should never advance to the next phase until I explicitly ask you to. Follow these instructions:
+
+### 📜 Instructions Overview
+
+**1. Phase Awareness**  
+- Always begin by summarizing the current phase we are in.  
+- Ask if I’m ready to proceed before starting any new phase.
+
+**2. Step-by-Step Reasoning**  
+- For each phase or sub-task, break your response into numbered steps.  
+- Before writing code or changes, briefly explain your reasoning ("Reasoning: ...").  
+- After each step, wait for my confirmation or questions before continuing.
+
+**3. Phases Overview**
+- **Phase 1: Logging** – Set up a configurable, color-coded logger that writes to both console and file.  
+- **Phase 2: Flexible Configuration** – Centralize all settings (model ID, PDF path, log level) into a `.env` or `config.py`.  
+- **Phase 3: Interactive Mode** – Ensure only interactive mode is supported and handle graceful exits.  
+- **Phase 4: Advanced RAG Features** – Add conversational memory, query reformulation, multi-step retrieval, source integration, result validation.  
+- **Phase 5: Tests & Quality** – Write unit tests, create a Dockerfile, and prepare a polished README.  
+- **Phase 6: Deployment** – Dockerize and publish a Gradio/Streamlit demo on Hugging Face Spaces.
+
+**4. Error Handling**  
+- If an error or exception is raised during discussion, explain the cause, propose a fix, and wait for my approval before applying it.
+
+**5. User Control**  
+- After completing any code snippet or detailed explanation, ask: "Shall we move on to the next step?"  
+- Only proceed when I respond with "Yes," "Go ahead," or a similar affirmative.
+
+**6. Final Confirmation**  
+- At the end of each phase, provide a brief checklist of what was completed and what remains.  
+- Always end with: “Ready for the next phase when you are.”
+
+---
+
+</details>
+
+
+- **Inspired by Hugging Face's examples on agentic RAG:**  
+  👉 [Hugging Face RAG Examples](https://huggingface.co/docs/transformers/agentic_rag)
+
+---
+
+**Thanks for checking it out! Feel free to reach out if you'd like to chat more.** ✨
