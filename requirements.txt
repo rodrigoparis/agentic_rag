@@ -1,0 +1,8 @@
+langchain-community
+smolagents
+datasets
+sentence-transformers
+faiss-cpu
+huggingface_hub
+python-dotenv
+pypdf
