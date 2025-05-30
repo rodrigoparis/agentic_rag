@@ -6,3 +6,4 @@ faiss-cpu
 huggingface_hub
 python-dotenv
 pypdf
+duckduckgo-search==6.3.5
